@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  background-color: white;
+  color: #1e1e1e;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 14px;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+i.fi {
+  color: #1e1e1e;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes showForm {
+  from {
+    opacity: 0;
+    top: 10%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+@keyframes hideForm {
+  from {
+    opacity: 1;
+    top: 50%;
+  }
+  to {
+    opacity: 0;
+    top: 10%;
+  }
+}
+
+:root {
+  --warna-saatIni: #74bd7bd0;
+}
+header {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.main-nav > section > img {
+  width: 35px;
+  border: 2px solid #1e1e1e;
+  border-radius: 6px;
+  padding: 4px;
+}
+.main-nav > section.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding-top: 11px;
+}
+.main-nav > i {
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 35px;
+  transition: 300ms;
+}
+section > a,
+.change-color div {
+  transition: 300ms;
+}
+.main-nav > i:hover ~ section.sosial-media,
+.main-nav > .image:hover ~ section.mulai,
+.main-nav > section:hover,
+.change-color:hover > section,
+.change-color > section:hover {
+  display: flex;
+}
+section > a:hover,
+.change-color div:hover {
+  margin-top: -8px;
+}
+.main-nav,
+.change-color {
+  background-color: var(--warna-saatIni);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  width: 50px;
+  gap: 14px;
+}
+.main-nav > .sosial-media,
+.mulai,
+.change-color section {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  animation: slideRight 0.3s ease forwards;
+  background-color: white;
+  z-index: 9999;
+  border-radius: 6px;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  gap: 10px;
+  right: 50px;
+}
+.main-nav > section.sosial-media {
+  top: 50px;
+}
+.main-nav > section.mulai {
+  cursor: pointer;
+  top: 10px;
+  height: 40px;
+  width: 140px;
+}
+.main-nav > section.mulai > p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.change-color {
+  margin-top: 10px;
+  height: 48px;
+  gap: 0px;
+  cursor: pointer;
+}
+.change-color i {
+  font-size: 18px;
+  margin-bottom: -2px;
+}
+#kuning,
+#ungu,
+#hijau {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px dashed #1e1e1e;
+  cursor: pointer;
+}
+#kuning {
+  background-color: #ddd46b;
+}
+#ungu {
+  background-color: #a0a6aa;
+}
+#hijau {
+  background-color: #74bd7b;
+  border: 1px solid #1e1e1e;
+}
+
+form {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+}
+form.display {
+  display: block;
+  animation: showForm 0.3s ease forwards;
+}
+form.closeForm {
+  animation: hideForm 0.3s ease forwards;
+}
+#error.back {
+  animation: slideUp 0.3s ease forwards;
+}
+form > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  top: -9px;
+  right: -8px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+form > button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+label {
+  font-weight: 500;
+  margin-top: 10px;
+}
+form > button {
+  background-color: var(--warna-saatIni);
+  color: #1e1e1e;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+#warning {
+  display: none;
+}
+#error {
+  position: fixed;
+  opacity: 0;
+  border: 1px solid rgb(163, 21, 21);
+  background-color: rgba(255, 163, 163, 0.527);
+  animation: slideDown 0.3s ease forwards;
+  border-radius: 6px;
+  font-weight: 500;
+  top: 10px;
+  right: 30px;
+  padding: 10px 15px;
+  transition: 300ms;
+}
+main {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  position: absolute;
+  height: 100vh;
+}
+main > article {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 10px 180px;
+}
+main > .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.warnaTeks {
+  background-color: var(--warna-saatIni);
+  padding: 0 6px;
+}
+.hero > button {
+  padding: 10px 12px;
+  background-color: var(--warna-saatIni);
+  border: none;
+  border-radius: 6px;
+}
+.btn-mulai > a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+article.VPS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+section.konten-VPS {
+  display: flex;
+  position: relative;
+  gap: 50px;
+}
+section.headline-VPS > span {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  border-radius: 50%;
+  width: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid var(--warna-saatIni);
+  color: #1e1e1e;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+.headline-VPS {
+  display: flex;
+  justify-content: center;
+}
+.VPS-deskripsi {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  animation: slideDown 0.4s ease forwards;
+  transition: 300ms;
+  padding: 10px 20px;
+  margin-top: 30px;
+  width: 340px;
+  gap: 15px;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+section.headline-VPS > span:hover ~ .VPS-deskripsi,
+.VPS-deskripsi:hover {
+  display: flex;
+}
+article.review-fitur {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+section.fitur {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /**/
+}
+section.fitur-card {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 18px;
+  border-radius: 6px;
+  gap: 10px;
+  width: 250px;
+  margin-right: 70px;
+  margin-top: 100px;
+}
+section.fitur-card.displaySlide {
+  display: flex;
+}
+section.tombolSlider {
+  display: flex;
+  position: absolute;
+  gap: 30px;
+  left: 265px;
+  top: 535px;
+}
+article.pageTerakhir {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+footer p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+}
+.progress-bar {
+  height: 3px;
+  background-color: var(--warna-saatIni);
+  width: 0%;
+}
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
