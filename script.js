@@ -97,7 +97,7 @@ ubahKuning.addEventListener("click", () => {
 });
 
 ubahUngu.addEventListener("click", () => {
-  document.documentElement.style.setProperty("--warna-saatIni", "#a0a6aad0");
+  document.documentElement.style.setProperty("--warna-saatIni", "#6b8dddd0");
   ubahUngu.style.setProperty("border", "1px solid #1e1e1e");
   ubahKuning.style.setProperty("border", "1px dashed #1e1e1e");
   ubahHijau.style.setProperty("border", "1px dashed #1e1e1e");

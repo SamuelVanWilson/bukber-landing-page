@@ -226,7 +226,7 @@ section > a:hover,
   background-color: #ddd46b;
 }
 #ungu {
-  background-color: #a0a6aa;
+  background-color: #6b8ddd;
 }
 #hijau {
   background-color: #74bd7b;
@@ -315,6 +315,7 @@ main {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   position: absolute;
+  width: 100%;
   height: 100vh;
 }
 main > article {
@@ -450,11 +451,11 @@ footer p {
 }
 .progress-container {
   width: 100%;
-  height: 3px;
+  height: 5px;
   background: #ccc;
 }
 .progress-bar {
-  height: 3px;
+  height: 5px;
   background-color: var(--warna-saatIni);
   width: 0%;
 }
