@@ -8,6 +8,10 @@ const ubahKuning = document.getElementById("kuning");
 const BtnKirim = document.getElementById("submit-form");
 const imgMulai = document.querySelector("section.mulai");
 const formulir = document.getElementById("form");
+const containForm = document.getElementById("form-section")
+const containImgForm = document.getElementById("form-img")
+const imgForm1 = document.getElementById("form-img1")
+const imgForm2 = document.getElementById("form-img2")
 const tandaSilang = document.querySelector("form > i");
 const BtnForm = document.querySelectorAll(".form-display");
 let slideIndex = 0;
@@ -15,14 +19,27 @@ let intervalId = null;
 
 imgMulai.addEventListener("click", () => {
   formulir.classList.add("display");
+  containForm.classList.add("displayBlock");
+  containImgForm.classList.add("display-ImgForm")
+  imgForm1.classList.add("show-form")
+  imgForm2.classList.add("show-form")
 });
 
 tandaSilang.addEventListener("click", () => {
   formulir.classList.add("closeForm");
+  containForm.classList.add("closeForm");
+  imgForm1.classList.add("close-form")
+  imgForm2.classList.add("close-form")
   setTimeout(() => {
     formulir.classList.remove("display");
     formulir.classList.remove("closeForm");
+    imgForm1.classList.remove("close-form")
+    imgForm2.classList.remove("close-form")
+    imgForm1.classList.remove("show-form")
+    imgForm2.classList.remove("show-form")
+    containForm.classList.remove("displayBlock");
   }, 400);
+
 });
 
 function notifError(pesan, e) {

@@ -94,6 +94,26 @@ i.fi {
     transform: translateX(0);
   }
 }
+@keyframes showImg {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes closeImg {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+}
 @keyframes showForm {
   from {
     opacity: 0;
@@ -234,6 +254,7 @@ section > a:hover,
 }
 
 .ilstr {
+  border: 1px solid red;
   position: absolute;
 }
 .contain-1 {
@@ -272,51 +293,57 @@ section > a:hover,
 #ilstr-3 {
   display: flex;
   justify-content: start;
-  height: 30vh;
-  width: 30vw;
+  align-items: end;
+  height: 35vh;
+  width: 45vw;
   right: 0;
-  bottom: 400px;
+  top: 0;
 }
 #ilstr-4 {
   display: flex;
   justify-content: start;
-  height: 18vh;
+  height: 45vh;
   width: 35vw;
   right: 0;
-  top: 400px;
+  bottom: 0;
 }
 #ilstr-5 {
   display: flex;
   justify-content: end;
-  height: 20vh;
+  align-items: end;
+  height: 26vh;
   width: 33vw;
   left: 0;
   top: 0;
 }
 
 #form-section {
+  display: none;
   border: 1px solid red;
   position: fixed;
   z-index: 1020;
   width: 100vw;
   height: 100vh;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 form {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1010;
+  z-index: 1040;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
   background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   width: 450px;
+}
+#form-section.displayBlock {
+  display: block;
 }
 form.display {
   display: block;
@@ -369,17 +396,39 @@ form > button {
   cursor: pointer;
 }
 #form-img {
+  border: 1px solid red;
   position: absolute;
-  display: none;
-  justify-content: space-between;
-  width: 50vw;
-  z-index: 1002;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  height: 44vh;
+  width: 95vw;
+  z-index: 1050;
+  bottom: -100px;
+  left: 0;
 }
-form img {
-  width: 28%;
+
+#form-img.display-ImgForm {
+  display: flex;
+}
+#form-img1.show-form {
+  animation: showImg 0.8s ease forwards;
+}
+#form-img2.show-form {
+  animation: showImg 0.5s ease forwards;
+}
+#form-img1.close-form {
+  animation: closeImg 0.6s ease forwards;
+}
+#form-img2.close-form {
+  animation: closeImg 0.6s ease forwards;
+}
+#form-img2 {
+  margin-top: 10px;
+  margin-left: -50px;
+  height: 25vh;
+}
+#form-img img {
+  border: 1px solid red;
 }
 #warning {
   display: none;
