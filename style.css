@@ -235,73 +235,87 @@ section > a:hover,
 
 .ilstr {
   position: absolute;
-  border: 1px solid red;
 }
 .contain-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   bottom: 0;
   right: 75px;
 }
 #ilstr-1 {
-  width: 180px;
-  bottom: 260px;
+  margin-bottom: -130px;
+  width: 10vw;
+  margin-bottom: -150px;
   right: 70px;
 }
 #ilstr-1 p {
   color: rgba(0, 0, 0, 0.65);
   text-align: center;
   font-size: 15px;
-  margin-left: -130px;
-  margin-bottom: -30px;
+  margin-left: -110px;
+  margin-bottom: -18px;
   width: 150px;
 }
 #ilstr-2 {
   display: flex;
   justify-content: end;
   height: 27vh;
-  width: 35vw;
+  width: 40vw;
   left: 0;
-  bottom: 15px;
+  bottom: 40px;
+}
+#ilstr-2 > svg {
+  margin-right: -60px;
 }
 #ilstr-3 {
   display: flex;
   justify-content: start;
-  height: 10vh;
-  width: 40vw;
+  height: 30vh;
+  width: 30vw;
   right: 0;
   bottom: 400px;
 }
 #ilstr-4 {
   display: flex;
   justify-content: start;
-  height: 10vh;
-  width: 30vw;
+  height: 18vh;
+  width: 35vw;
   right: 0;
   top: 400px;
 }
-
 #ilstr-5 {
   display: flex;
   justify-content: end;
-  height: 27vh;
-  width: 35vw;
+  height: 20vh;
+  width: 33vw;
   left: 0;
-  top: 150px;
+  top: 0;
+}
+
+#form-section {
+  border: 1px solid red;
+  position: fixed;
+  z-index: 1020;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 form {
-  display: none;
-  position: fixed;
-  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 450px;
 }
 form.display {
@@ -354,17 +368,18 @@ form > button {
   border: none;
   cursor: pointer;
 }
-form section {
-  border: 1px solid red;
+#form-img {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: space-between;
+  width: 50vw;
   z-index: 1002;
-  width: 300px;
-  left: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -100px;
 }
 form img {
-  width: 500px;
+  width: 28%;
 }
 #warning {
   display: none;
