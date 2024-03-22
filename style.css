@@ -97,7 +97,7 @@ i.fi {
 @keyframes showImg {
   from {
     opacity: 0;
-    transform: translateY(120px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -171,11 +171,25 @@ section > a,
 .change-color div {
   transition: 300ms;
 }
+.mulai > a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: start;
+}
+nav button {
+  width: max-content;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+}
 .main-nav > i:hover ~ section.sosial-media,
-.main-nav > .image:hover ~ section.mulai,
+.main-nav > .image:hover ~ button.mulai,
 .main-nav > section:hover,
 .change-color:hover > section,
-.change-color > section:hover {
+.change-color > section:hover,
+nav button.mulai:hover {
   display: flex;
 }
 section > a:hover,
@@ -213,15 +227,11 @@ section > a:hover,
 .main-nav > section.sosial-media {
   top: 50px;
 }
-.main-nav > section.mulai {
+.main-nav > button.mulai {
   cursor: pointer;
   top: 10px;
   height: 40px;
   width: 140px;
-}
-.main-nav > section.mulai > p {
-  font-size: 16px;
-  font-weight: 600;
 }
 .change-color {
   margin-top: 10px;
@@ -243,7 +253,7 @@ section > a:hover,
   cursor: pointer;
 }
 #kuning {
-  background-color: #ddd46b;
+  background-color: #d3cb70;
 }
 #ungu {
   background-color: #6b8ddd;
@@ -319,7 +329,6 @@ section > a:hover,
 
 #form-section {
   display: none;
-  border: 1px solid red;
   position: fixed;
   z-index: 1020;
   width: 100vw;
@@ -333,7 +342,7 @@ form {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -65%);
   z-index: 1040;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
@@ -372,6 +381,11 @@ form > i {
 }
 input[type="text"],
 input[type="email"],
+input[type="number"] {
+  font-size: 18px;
+}
+input[type="text"],
+input[type="email"],
 input[type="number"],
 form > button {
   display: block;
@@ -381,7 +395,6 @@ form > button {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: 18px;
 }
 label {
   font-weight: 500;
@@ -390,20 +403,20 @@ label {
 form > button {
   background-color: var(--warna-saatIni);
   color: #1e1e1e;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 18px;
   padding: 15px 20px;
   border: none;
   cursor: pointer;
 }
 #form-img {
-  border: 1px solid red;
   position: absolute;
   display: flex;
   justify-content: center;
-  height: 44vh;
+  height: 54vh;
   width: 95vw;
-  z-index: 1050;
-  bottom: -100px;
+  z-index: 1030;
+  bottom: -110px;
   left: 0;
 }
 
@@ -423,12 +436,9 @@ form > button {
   animation: closeImg 0.6s ease forwards;
 }
 #form-img2 {
-  margin-top: 10px;
-  margin-left: -50px;
-  height: 25vh;
-}
-#form-img img {
-  border: 1px solid red;
+  margin-top: 4px;
+  margin-left: -60px;
+  height: 35vh;
 }
 #warning {
   display: none;
@@ -483,23 +493,64 @@ main > .hero {
   font-weight: 700;
   font-size: 16px;
 }
+
+#ilstr-6 {
+  display: flex;
+  justify-content: end;
+  bottom: 0;
+  left: 0;
+  width: 17vw;
+  height: 21vh;
+}
+#ilstr-7 {
+  display: flex;
+  right: 0;
+  bottom: 0;
+  height: 24vh;
+  width: 19vw;
+}
 article.VPS {
+  border: 1px solid red;
+}
+article.VPS {
+  position: relative;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
 }
-section.konten-VPS {
+.VPS > section {
+  border: 1px solid red;
+}
+section.konten-utama {
+  width: 100%;
+  height: 30vh;
   display: flex;
+  justify-content: space-between;
   position: relative;
-  gap: 50px;
+  gap: 30px;
+}
+section.konten-VPS {
+  border: 1px solid yellow;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.headline-VPS {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 section.headline-VPS > span {
   display: inline-block;
   text-align: center;
   cursor: pointer;
   position: absolute;
-  z-index: 100;
+  z-index: 1070;
   border-radius: 50%;
   width: 30px;
   font-size: 20px;
@@ -510,9 +561,39 @@ section.headline-VPS > span {
   height: 35px;
   line-height: 35px;
 }
-.headline-VPS {
+#VPS1,
+#VPS2,
+#VPS3 {
+  z-index: 1010;
   display: flex;
+  position: absolute;
+  border: 1px solid red;
+}
+#VPS1 {
+  z-index: 1020;
+  justify-content: end;
+  align-items: end;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 4vw;
+}
+#VPS2 {
+  position: relative;
   justify-content: center;
+  align-items: end;
+  bottom: 0;
+  left: 0;
+  height: 18vh;
+  width: 95%;
+}
+#VPS3 {
+  justify-content: start;
+  align-items: end;
+  top: 0;
+  right: 0;
+  height: 2vh;
+  width: 9vw;
 }
 .VPS-deskripsi {
   position: absolute;
@@ -520,18 +601,42 @@ section.headline-VPS > span {
   flex-direction: column;
   text-align: center;
   cursor: pointer;
-  animation: slideDown 0.4s ease forwards;
+  z-index: 1070;
+  background-color: white;
   transition: 300ms;
-  padding: 10px 20px;
-  margin-top: 30px;
-  width: 340px;
+  padding: 15px 20px;
+  width: 250px;
   gap: 15px;
   border: 2px solid black;
   border-radius: 6px;
 }
+#VPS1 .VPS-deskripsi,
+#VPS3 .VPS-deskripsi {
+  top: 35px;
+  animation: slideDown 0.4s ease forwards;
+}
+#VPS2 .VPS-deskripsi {
+  bottom: 0;
+  animation: showImg 0.4s ease forwards;
+}
+.VPS-deskripsi svg {
+  border: 1px solid red;
+  height: 13vh;
+  margin: auto;
+}
+.VPS-deskripsi h4 {
+  font-size: 18px;
+}
+.VPS-deskripsi p {
+  font-size: 16px;
+}
 section.headline-VPS > span:hover ~ .VPS-deskripsi,
 .VPS-deskripsi:hover {
   display: flex;
+}
+section.konten-premium {
+  border: 1px solid red;
+  width: 80%;
 }
 article.review-fitur {
   display: flex;
@@ -598,4 +703,23 @@ footer p {
 }
 
 @media only screen and (min-width: 1024px) {
+}
+@media only screen and (max-width: 1400px) {
+  #form {
+    width: 350px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  form > button {
+    padding: 15px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    font-size: 14px;
+  }
+  form > button {
+    font-size: 16px;
+  }
 }

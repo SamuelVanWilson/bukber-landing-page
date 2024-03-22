@@ -6,40 +6,41 @@ const ubahHijau = document.getElementById("hijau");
 const ubahUngu = document.getElementById("ungu");
 const ubahKuning = document.getElementById("kuning");
 const BtnKirim = document.getElementById("submit-form");
-const imgMulai = document.querySelector("section.mulai");
 const formulir = document.getElementById("form");
-const containForm = document.getElementById("form-section")
-const containImgForm = document.getElementById("form-img")
-const imgForm1 = document.getElementById("form-img1")
-const imgForm2 = document.getElementById("form-img2")
+const containForm = document.getElementById("form-section");
+const containImgForm = document.getElementById("form-img");
+const imgForm1 = document.getElementById("form-img1");
+const imgForm2 = document.getElementById("form-img2");
 const tandaSilang = document.querySelector("form > i");
-const BtnForm = document.querySelectorAll(".form-display");
+const BtnForms = document.querySelectorAll(".form-display");
 let slideIndex = 0;
 let intervalId = null;
 
-imgMulai.addEventListener("click", () => {
-  formulir.classList.add("display");
-  containForm.classList.add("displayBlock");
-  containImgForm.classList.add("display-ImgForm")
-  imgForm1.classList.add("show-form")
-  imgForm2.classList.add("show-form")
+BtnForms.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    formulir.classList.add("display");
+    containForm.classList.add("displayBlock");
+    containImgForm.classList.add("display-ImgForm");
+    imgForm1.classList.add("show-form");
+    imgForm2.classList.add("show-form");
+    e.preventDefault();
+  });
 });
 
 tandaSilang.addEventListener("click", () => {
   formulir.classList.add("closeForm");
   containForm.classList.add("closeForm");
-  imgForm1.classList.add("close-form")
-  imgForm2.classList.add("close-form")
+  imgForm1.classList.add("close-form");
+  imgForm2.classList.add("close-form");
   setTimeout(() => {
     formulir.classList.remove("display");
     formulir.classList.remove("closeForm");
-    imgForm1.classList.remove("close-form")
-    imgForm2.classList.remove("close-form")
-    imgForm1.classList.remove("show-form")
-    imgForm2.classList.remove("show-form")
+    imgForm1.classList.remove("close-form");
+    imgForm2.classList.remove("close-form");
+    imgForm1.classList.remove("show-form");
+    imgForm2.classList.remove("show-form");
     containForm.classList.remove("displayBlock");
   }, 400);
-
 });
 
 function notifError(pesan, e) {
@@ -107,7 +108,7 @@ ubahHijau.addEventListener("click", () => {
 });
 
 ubahKuning.addEventListener("click", () => {
-  document.documentElement.style.setProperty("--warna-saatIni", "#ddd46bd0");
+  document.documentElement.style.setProperty("--warna-saatIni", "#d3cb70d0");
   ubahKuning.style.setProperty("border", "1px solid #1e1e1e");
   ubahHijau.style.setProperty("border", "1px dashed #1e1e1e");
   ubahUngu.style.setProperty("border", "1px dashed #1e1e1e");
