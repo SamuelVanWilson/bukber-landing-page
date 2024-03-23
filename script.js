@@ -144,3 +144,31 @@ BtnKirim.addEventListener("click", (event) => {
     notifError("Kamu harus lengkapin datamu", event);
   }
 });
+
+if (!localStorage.getItem('visitedBefore')) {
+  localStorage.setItem('visitedBefore', true);
+  localStorage.setItem('countdownStartTime', new Date().getTime());
+}
+
+let countdownEndTime = parseInt(localStorage.getItem('countdownStartTime')) + 24 * 60 * 60 * 1000;
+
+let countdownInterval = setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+  let currentTime = new Date().getTime();
+
+  let timeRemaining = countdownEndTime - currentTime;
+
+  let hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  let countdownOutput = hours + "h " + minutes + "m " + seconds + "s ";
+
+  document.getElementById("countdown").innerHTML = countdownOutput;
+
+  if (timeRemaining < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("countdown").innerHTML = "Countdown selesai!";
+  }
+}

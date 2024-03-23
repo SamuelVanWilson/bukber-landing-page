@@ -676,11 +676,6 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
 .pricing-card span {
   font-size: 14px;
 }
-.pricing-card .description {
-  color: #3b3b3b;
-  margin-top: 15px;
-  font-size: 12px ;
-}
 .pricing-card .reward {
   border: 1px solid red;
   font-size: 14px;
@@ -689,12 +684,6 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
   padding: 5px 10px;
   flex-direction: column;
   align-items: center;
-}
-.pricing-card .offer {
-  display: block;
-  color: #555;
-  font-size: 14px;
-  margin-top: 25px;
 }
 .pricing-card button{
   padding: 8px 10px;
@@ -724,6 +713,14 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
   right: -17px;
   top: 30%;
 }
+.container-countdown {
+  display: flex;
+  position: absolute;
+  font-weight: bold;
+  gap: 5px;
+  bottom: 10px;
+  right: 15px;
+}
 
 article.review-fitur {
   display: flex;
@@ -731,9 +728,11 @@ article.review-fitur {
   position: relative;
 }
 section.fitur {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  gap: 20px; /**/
+  position: relative;
+  gap: 20px;
 }
 section.fitur-card {
   display: none;
@@ -744,18 +743,25 @@ section.fitur-card {
   border-radius: 6px;
   gap: 10px;
   width: 250px;
-  margin-right: 70px;
-  margin-top: 100px;
+  margin: 15px 50px;
 }
 section.fitur-card.displaySlide {
   display: flex;
 }
 section.tombolSlider {
+  border: 1px solid red;
   display: flex;
   position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  top: 50%;
+  transform: translateY(-50%);
   gap: 30px;
-  left: 265px;
-  top: 535px;
+  width: 100%;
+}
+section.tombolSlider i {
+  font-size: 30px;
 }
 article.pageTerakhir {
   display: flex;
@@ -787,7 +793,38 @@ footer p {
   width: 0%;
 }
 
-@media only screen and (min-width: 1850px) {
+@media only screen and (max-width: 1850px) {
+  .pricing-card {
+    padding: 10px;
+    width: 70%;
+  }  
+  .pricing-card .title {
+    font-size: 22px;
+    color: #333;
+  }
+  .pricing-card img{
+    height: 80%;
+  }
+  .pricing-card span {
+    font-size: 12px;
+  }
+  .pricing-card .price {
+    font-size: 18px;
+  }
+  .pricing-card .deskripsi-konten {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .pricing-card .reward {
+    font-size: 12px;
+    margin: 0;
+  }
+  .container-countdown {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 1600px) {
   #form {
@@ -813,5 +850,30 @@ footer p {
     width: 35px;
     height: 35px;
     line-height: 35px;
+  }
+}
+@media only screen and (max-width: 1500px){
+  .pricing-card img{
+    height: 65%;
+  }
+  .pricing-card .deskripsi-konten {
+    padding: 15px 5px;
+    width: 100%;
+  }
+  .pricing-card .title {
+    font-size: 20px;
+    color: #333;
+  }
+  .pricing-card span {
+    font-size: 10px;
+  }
+  .pricing-card .price {
+    font-size: 16px;
+  }
+  .pricing-card button{
+    padding: 6px 8px;
+  }
+  .pricing-card button a{
+    font-size: 12px;
   }
 }
