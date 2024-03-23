@@ -413,7 +413,7 @@ form > button {
   position: absolute;
   display: flex;
   justify-content: center;
-  height: 54vh;
+  height: 50vh;
   width: 95vw;
   z-index: 1030;
   bottom: -110px;
@@ -481,8 +481,8 @@ main > .hero {
   background-color: var(--warna-saatIni);
   padding: 0 6px;
 }
-.hero > button {
-  padding: 10px 12px;
+ button {
+  padding: 12px 14px;
   background-color: var(--warna-saatIni);
   border: none;
   border-radius: 6px;
@@ -502,12 +502,20 @@ main > .hero {
   width: 17vw;
   height: 21vh;
 }
+#ilstr-6 > svg{
+  width: 8vw;
+  height: 12vh;
+}
 #ilstr-7 {
   display: flex;
   right: 0;
   bottom: 0;
   height: 24vh;
   width: 19vw;
+}
+#ilstr-7 > svg {
+  width: 7vw;
+  height: 14vh;
 }
 article.VPS {
   border: 1px solid red;
@@ -552,14 +560,13 @@ section.headline-VPS > span {
   position: absolute;
   z-index: 1070;
   border-radius: 50%;
-  width: 30px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   border: 1px solid var(--warna-saatIni);
   color: #1e1e1e;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
 }
 #VPS1,
 #VPS2,
@@ -576,7 +583,7 @@ section.headline-VPS > span {
   top: 0;
   left: 0;
   height: 8vh;
-  width: 4vw;
+  width: 8vw;
 }
 #VPS2 {
   position: relative;
@@ -592,8 +599,8 @@ section.headline-VPS > span {
   align-items: end;
   top: 0;
   right: 0;
-  height: 2vh;
-  width: 9vw;
+  height: 3vh;
+  width: 11vw;
 }
 .VPS-deskripsi {
   position: absolute;
@@ -634,10 +641,90 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
 .VPS-deskripsi:hover {
   display: flex;
 }
-section.konten-premium {
+
+.pricing-card img{
   border: 1px solid red;
-  width: 80%;
+  height: 100%;
+  margin: auto;
 }
+.pricing-card {
+  width: 80%;
+  display: flex;
+  margin: 15px;
+  padding: 40px 25px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.pricing-card .deskripsi-konten {
+  width: 90%;
+  border: 1px solid red;
+  margin: 0px 10px;
+}
+.pricing-card .title {
+  font-size: 24px;
+  color: #333;
+}
+.pricing-card .price {
+  color: var(--warna-saatIni);
+  font-weight: 700;
+  font-size: 20px;
+}
+.pricing-card span {
+  font-size: 14px;
+}
+.pricing-card .description {
+  color: #3b3b3b;
+  margin-top: 15px;
+  font-size: 12px ;
+}
+.pricing-card .reward {
+  border: 1px solid red;
+  font-size: 14px;
+  display: flex;
+  margin: 0 40px;
+  padding: 5px 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing-card .offer {
+  display: block;
+  color: #555;
+  font-size: 14px;
+  margin-top: 25px;
+}
+.pricing-card button{
+  padding: 8px 10px;
+  margin-top: 5px;
+}
+.pricing-card button a{
+  font-size: 14px;
+}
+.ribbon-wrap {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  pointer-events: none;
+}
+.ribbon {
+  width: 230px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 0;
+  background: linear-gradient(to right, #ffd700, #ffaf0f);
+  color: #1e1e1e;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: -17px;
+  top: 30%;
+}
+
 article.review-fitur {
   display: flex;
   flex-direction: row-reverse;
@@ -699,12 +786,10 @@ footer p {
   background-color: var(--warna-saatIni);
   width: 0%;
 }
-@media only screen and (min-width: 768px) {
-}
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1850px) {
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1600px) {
   #form {
     width: 350px;
   }
@@ -721,5 +806,12 @@ footer p {
   }
   form > button {
     font-size: 16px;
+  }
+
+  section.headline-VPS > span {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
   }
 }
