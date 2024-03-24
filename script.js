@@ -5,13 +5,13 @@ const main = document.querySelector("main");
 const ubahHijau = document.getElementById("hijau");
 const ubahUngu = document.getElementById("ungu");
 const ubahKuning = document.getElementById("kuning");
-const BtnKirim = document.getElementById("submit-form");
+const BtnKirim = document.getElementById("kirim-form");
 const formulir = document.getElementById("form");
 const containForm = document.getElementById("form-section");
 const containImgForm = document.getElementById("form-img");
 const imgForm1 = document.getElementById("form-img1");
 const imgForm2 = document.getElementById("form-img2");
-const tandaSilang = document.querySelector("form > i");
+const tandaSilang = document.querySelector("form#form > i");
 const BtnForms = document.querySelectorAll(".form-display");
 let slideIndex = 0;
 let intervalId = null;
@@ -122,11 +122,11 @@ ubahUngu.addEventListener("click", () => {
 });
 
 BtnKirim.addEventListener("click", (event) => {
-  var name = document.getElementById("name").value.trim();
-  var city = document.getElementById("city").value.trim();
-  var email = document.getElementById("email").value.trim();
-  var zipCode = document.getElementById("zip-code").value.trim();
-  var checkbox = document.getElementById("status").checked;
+  let name = document.getElementById("nama").value.trim();
+  let city = document.getElementById("kota").value.trim();
+  let email = document.getElementById("email2").value.trim();
+  let zipCode = document.getElementById("kode-pos").value.trim();
+  let checkbox = document.getElementById("kebijakan").checked;
 
   if (isNaN(zipCode)) {
     notifError("Kode pos harus angka", event);
