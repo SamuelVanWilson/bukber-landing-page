@@ -172,3 +172,22 @@ function updateCountdown() {
       document.getElementById("countdown").innerHTML = "Countdown selesai!";
   }
 }
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.querySelector('.info-lebih').style.opacity = '1';
+    card.querySelector('.info-lebih').style.height = 'auto';
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.querySelector('.info-lebih').style.opacity = '0';
+    card.querySelector('.info-lebih').style.height = '0';
+  });
+
+});
+document.getElementById("info-lebih1").addEventListener('click', () => {
+  window.location.href = 'https://www.suara.com/tekno/2024/02/01/093231/riset-orang-indonesia-rawan-jadi-korban-penipuan-online-dan-kebocoran-data-di-2024#:~:text=Ketua%20Umum%20APJII%2C%20Muhammad%20Arif,persen%20di%20tahun%202023%20lalu.';
+});
+document.getElementById("info-lebih2").addEventListener('click', () => {
+  window.location.href = "https://www.djkn.kemenkeu.go.id/kpknl-tangerang1/baca-artikel/15915/Hoaks-Merajalela-Jangan-Sampai-Kamu-Jadi-Korbannya.html#:~:text=sebanyak%2011%2C9%25%20responden%20mengakui,dan%20berkomunikasi%20melalui%20dunia%20maya.";
+});
