@@ -1,7 +1,7 @@
 # BukBer (Buka Berpikir)
 > Halo, selamat datang di proyek landing page saya, BukBer (Buka Berpikir)! 🌟
 ---
-Proyek ini adalah hasil dari perjalanan saya di [**semifinal lomba digital nasional web development**](https://program.skilvul.com/ligadigitalnasional-web-development)  yang diselenggarakan oleh **Skilvul**. Lomba ini menantang peserta untuk membuat website dengan tema peningkatan literasi digital di Indonesia. Dan saya sangat senang karena ide saya diterima dan berhasil masuk semifinal!
+Proyek ini adalah hasil dari perjalanan saya di [**semifinal lomba liga digital nasional web development**](https://program.skilvul.com/ligadigitalnasional-web-development)  yang diselenggarakan oleh **Skilvul**. Lomba ini menantang peserta untuk membuat website dengan tema peningkatan literasi digital di Indonesia. Dan saya sangat senang karena ide saya diterima dan berhasil masuk semifinal!
 
 ### Apa Itu BukBer?
 BukBer adalah singkatan dari *"Buka Berpikir"*, yang saya pilih karena kebetulan pembuatan proyek ini jatuh pada bulan puasa. BukBer bukan hanya nama, tapi juga merupakan ajakan untuk membuka pikiran kita mengenai pentingnya literasi digital.
