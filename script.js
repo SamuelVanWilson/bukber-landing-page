@@ -191,3 +191,50 @@ document.getElementById("info-lebih1").addEventListener('click', () => {
 document.getElementById("info-lebih2").addEventListener('click', () => {
   window.location.href = "https://www.djkn.kemenkeu.go.id/kpknl-tangerang1/baca-artikel/15915/Hoaks-Merajalela-Jangan-Sampai-Kamu-Jadi-Korbannya.html#:~:text=sebanyak%2011%2C9%25%20responden%20mengakui,dan%20berkomunikasi%20melalui%20dunia%20maya.";
 });
+
+function handleGetFormData() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const city = document.getElementById('city').value;
+  const zipCode = document.getElementById('zip-code').value;
+  const status = document.getElementById('status').checked;
+
+  const formData = {
+      name: name,
+      email: email,
+      city: city,
+      zipCode: zipCode,
+      status: status
+  };
+
+  return formData;
+}
+function isNumber(inputString) {
+  for (let i = 0; i < inputString.length; i++) {
+      if (isNaN(inputString[i])) {
+          return false;
+      }
+  }
+  return true;
+}
+function checkboxIsChecked() {
+  const statusCheckbox = document.getElementById('status');
+  return statusCheckbox.checked;
+}
+function validateFormData(formData) {
+  if (formData && !isNaN(formData.zipCode) && document.getElementById('status').checked){
+      return true;
+  }
+  return false
+}
+function submit(){
+  const getForm = handleGetFormData();
+  const isValid = validateFormData(getForm);
+
+  if (isValid) {
+      document.getElementById("warning").textContent = ""
+  } else {
+      document.getElementById("warning").textContent = "Periksa form anda sekali lagi"
+  }
+}
+

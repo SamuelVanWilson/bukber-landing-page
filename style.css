@@ -146,6 +146,16 @@ i.fi {
 :root {
   --warna-saatIni: #74bd7bd0;
 }
+#name,
+#city,
+#email,
+#zip-code,
+#status,
+#check,
+button#submit-form,
+#warning {
+  display: none;
+}
 header {
   position: fixed;
   top: 50%;
@@ -273,7 +283,6 @@ section > a:hover,
 
 .ilstr {
   position: absolute;
-  border: 1px solid red;
 }
 .contain-1 {
   display: flex;
@@ -396,7 +405,7 @@ input[type="number"] {
 input[type="text"],
 input[type="email"],
 input[type="number"],
-#form > button {
+#form > button#kirim-form {
   display: block;
   width: 100%;
   margin: 10px 0;
@@ -411,7 +420,7 @@ label {
   font-weight: 500;
   margin-top: 10px;
 }
-#form > button {
+#form > button#kirim-form {
   background-color: var(--warna-saatIni);
   color: #1e1e1e;
   font-weight: 700;
@@ -545,7 +554,6 @@ button {
   transform: rotate(-90deg);
 }
 article.permasalahan {
-  border: 1px solid red;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -553,11 +561,10 @@ article.permasalahan {
   margin: auto;
   width: 60vw;
 }
-article.permasalahan p:nth-child(3){
+article.permasalahan p:nth-child(3) {
   margin-top: 40px;
 }
 section.data-card {
-  border: 1px solid red;  
   display: flex;
   justify-content: space-around;
   width: 50vw;
@@ -565,24 +572,20 @@ section.data-card {
   margin-top: 25px;
 }
 section.data-card .card {
-  border: 1px solid rgb(50, 61, 212);
   cursor: pointer;
   background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   width: 13vw;
   height: fit-content;
   margin: 10px;
   padding: 10px 18px 15px 18px;
 }
-section.data-card .card hr {
-  color: var(--warna-saatIni);
-}
 section.data-card .card > p {
   font-weight: 700;
   color: #5d5d5d;
 }
-section.data-card .card b{
+section.data-card .card b {
   display: inline-block;
   color: var(--warna-saatIni);
   margin-top: 15px;
@@ -596,6 +599,10 @@ section.data-card .card b{
   transition: opacity 0.3s ease, height 0.3s ease;
   margin-top: 10px;
 }
+section.data-card .card:hover .info-lebih {
+  opacity: 1;
+  height: fit-content;
+}
 .info-lebih p {
   margin-bottom: 8px;
   font-size: 16px;
@@ -604,6 +611,7 @@ section.data-card .card b{
   color: #1e1e1e92;
   font-size: 14px;
 }
+
 #ilstr-6 {
   display: flex;
   justify-content: end;
@@ -628,18 +636,11 @@ section.data-card .card b{
   height: 14vh;
 }
 article.VPS {
-  border: 1px solid red;
-}
-article.VPS {
   position: relative;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-}
-.VPS > section {
-  border: 1px solid red;
 }
 section.konten-utama {
   width: 100%;
@@ -650,7 +651,6 @@ section.konten-utama {
   gap: 30px;
 }
 section.konten-VPS {
-  border: 1px solid yellow;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -658,7 +658,6 @@ section.konten-VPS {
   width: 100%;
 }
 .headline-VPS {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   position: relative;
@@ -684,7 +683,6 @@ section.headline-VPS > span {
   z-index: 1010;
   display: flex;
   position: absolute;
-  border: 1px solid red;
 }
 #VPS1 {
   z-index: 1020;
@@ -724,7 +722,7 @@ section.headline-VPS > span {
   padding: 15px 20px;
   width: 250px;
   gap: 15px;
-  border: 2px solid black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
 }
 #VPS1 .VPS-deskripsi,
@@ -737,7 +735,6 @@ section.headline-VPS > span {
   animation: showImg 0.4s ease forwards;
 }
 .VPS-deskripsi svg {
-  border: 1px solid red;
   height: 13vh;
   margin: auto;
 }
@@ -753,7 +750,6 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
 }
 
 .pricing-card img {
-  border: 1px solid red;
   height: 100%;
   margin: auto;
 }
@@ -767,12 +763,11 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
   text-align: center;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   position: relative;
 }
 .pricing-card .deskripsi-konten {
   width: 90%;
-  border: 1px solid red;
   margin: 0px 10px;
 }
 .pricing-card .title {
@@ -788,7 +783,6 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
   font-size: 14px;
 }
 .pricing-card .reward {
-  border: 1px solid red;
   font-size: 14px;
   display: flex;
   margin: 0 40px;
@@ -860,12 +854,11 @@ section.headline-VPS > span:hover ~ .VPS-deskripsi,
   width: 14vw;
   height: 24vh;
 }
-#ilstr-14 svg{
+#ilstr-14 svg {
   transform: rotate(-40deg);
 }
 
 article.review-fitur {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -874,14 +867,10 @@ article.review-fitur {
   margin: auto;
   width: 70vw;
 }
-article.review-fitur .deskripsi {
-  border: 1px solid red;
-}
-article.review-fitur .deskripsi p{
+article.review-fitur .deskripsi p {
   margin-top: 10px;
 }
 section.fitur {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -904,7 +893,6 @@ section.fitur-card.displaySlide {
   display: flex;
 }
 section.tombolSlider {
-  border: 1px solid red;
   display: flex;
   position: absolute;
   justify-content: space-between;
@@ -1033,22 +1021,31 @@ footer p {
   }
   #ilstr-9 {
     width: 14vw;
-    height: 16vh;
+    height: 14vh;
   }
   #ilstr-10 {
     width: 22vw;
-    height: 23vh;
+    height: 21vh;
   }
   #ilstr-11 {
-    width: 11vw;
-    height: 30vh;
+    width: 20vw;
+    height: 28vh;
   }
   #ilstr-8 {
-    width: 10vw;
-    height: 36vh;
+    width: 22vw;
+    height: 34vh;
   }
   section.data-card .card b {
     font-size: 30px;
+  }
+  article.permasalahan {
+    width: 80vw;
+  }
+  section.fitur-card img {
+    width: 70%;
+  }
+  article.review-fitur {
+    width: 90vw;
   }
 }
 @media only screen and (max-width: 1500px) {
@@ -1087,22 +1084,6 @@ footer p {
   }
   .container-countdown {
     font-size: 12px;
-  }
-  #ilstr-9 {
-    width: 14vw;
-    height: 14vh;
-  }
-  #ilstr-10 {
-    width: 22vw;
-    height: 21vh;
-  }
-  #ilstr-11 {
-    width: 11vw;
-    height: 28vh;
-  }
-  #ilstr-8 {
-    width: 10vw;
-    height: 34vh;
   }
   section.data-card .card b {
     font-size: 30px;
